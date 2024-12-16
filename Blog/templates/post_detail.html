@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="viewport" context="width=device-width, initial-scale=1.0">
+        <titile>{{ post.title }}</titile>
+        <link rel="stylesheet" href="{% static'style.css' %}">
+    </head>
+    <body>
+        <h1>{{ post.title }}</h1>
+        <p><em>Published on: {{ post.created_at }}</em></p>
+        {% if post.image.url }
+            <img src="{{ post.image.url }}" alt="{{ post.title }}">
+        {% endif }
+        <div>
+            <p>{{ post.content }}</p>
+        </div>
+    </body>
+</html>
